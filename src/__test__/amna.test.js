@@ -45,13 +45,17 @@ describe("Grow plant page testing", () => {
       expect(animationn("shovell")).toBe("shovell 1.7s infinite");
     });
     test("sun animation", () => {
-      expect(animationn("sun")).toBe("moveingsun 3s infinite");
+      expect(animationn("sun")).toMatch(/moveingsun 3s infinite/);
     });
     test("water animation", () => {
-      expect(animationn("water")).toBe("mymove 3s infinite");
+      // expect(animationn("water")).toEqual("mymove 3s infinite");
+      expect(animationn("water")).toEqual([
+        expect.stringContaining("3s"),
+        expect.stringMatching(/mymove 3s infinite/),
+      ]);
     });
     test("not exisiting animation", () => {
-      expect(animationn("jvf")).toBe("error the animationn is wronge");
+      expect(animationn("jvf")).toMatch("error the animationn is wronge");
     });
   });
 
@@ -95,7 +99,7 @@ describe("Grow plant page testing", () => {
 
   describe("right images", () => {
     test("first image", () => {
-      expect(allimages(0)).toBe("imgs/1.png");
+      expect(allimages(0)).toMatch("imgs/1.png");
     });
 
     test("second image", () => {
@@ -107,7 +111,7 @@ describe("Grow plant page testing", () => {
     });
 
     test("fourth image", () => {
-      expect(allimages(3)).toBe("imgs/4.png");
+      expect(allimages(3)).toEqual("imgs/4.png");
     });
 
     test("fifth image", () => {
@@ -124,7 +128,7 @@ describe("Grow plant page testing", () => {
 
   describe("right text", () => {
     test("empty string return nothing", () => {
-      expect(actionText("nth")).toBe("");
+      expect(actionText("nth")).toMatch("");
     });
 
     test("water action", () => {
@@ -136,11 +140,15 @@ describe("Grow plant page testing", () => {
     });
 
     test("sun action", () => {
-      expect(actionText("sun")).toBe("Need Sun");
+      expect(actionText("sun")).toMatch("Need Sun");
     });
 
     test("last text infor the user its done", () => {
       expect(actionText("done")).toBe("The flower look pretty good work");
+    });
+
+    test("last text infor the user its done it should has good work word", () => {
+      expect(actionText("done")).toContain("good work");
     });
 
     test("error check", () => {
@@ -163,8 +171,15 @@ describe("Sticker page testing the right shape", () => {
       expect(shape("frame")).toBe("1.5px solid black");
     });
 
+    test("adding a frame to the images", () => {
+      expect(shape("frame")).toEqual([
+        expect.stringContaining("solid"),
+        expect.stringMatching(/1.5px solid black/),
+      ]);
+    });
+
     test("adding corener to the images", () => {
-      expect(shape("corener")).toBe("15px 50px 30px");
+      expect(shape("corener")).toMatch("15px 50px 30px");
     });
 
     test("replacing the frame with the defult one", () => {
@@ -180,19 +195,19 @@ describe("Sticker page testing the right shape", () => {
 describe("delivery page testing the values for moving the image", () => {
   describe("right x & y values for moving the images with keybored event", () => {
     test("up arrowy event", () => {
-      expect(upArrowy(380)).toBe(390);
+      expect(upArrowy(380)).toEqual(390);
     });
 
     test("down arrowy event", () => {
-      expect(downArrowy(370)).toBe(360);
+      expect(downArrowy(370)).toEqual(360);
     });
 
     test("right arrowy event", () => {
-      expect(rightArrowx(580)).toBe(590);
+      expect(rightArrowx(580)).toEqual(590);
     });
 
     test("left arrowy event", () => {
-      expect(leftArrowx(20)).toBe(10);
+      expect(leftArrowx(20)).toEqual(10);
     });
   });
 });
@@ -204,7 +219,7 @@ describe("shipping page testing the values for moving the image ti rigth", () =>
     });
 
     test("moving the box with second click", () => {
-      expect(positiveforword(2)).toBe("35%");
+      expect(positiveforword(2)).toMatch(/35%/);
     });
 
     test("moving the box with third click", () => {
@@ -212,57 +227,105 @@ describe("shipping page testing the values for moving the image ti rigth", () =>
     });
 
     test("moving the box with fourth click", () => {
-      expect(positiveforword(4)).toBe("75%");
+      expect(positiveforword(4)).toMatch(/75%/);
     });
 
     test("clicking for wronge passing value", () => {
-      expect(positiveforword(89)).toBe("there is no number");
+      expect(positiveforword(89)).toEqual("there is no number");
+    });
+
+    test("first click passing value right should not give error", () => {
+      expect(positiveforword(1)).not.toEqual("there is no number");
+    });
+
+    test("sec click passing value right should not give error", () => {
+      expect(positiveforword(2)).not.toEqual("there is no number");
+    });
+
+    test("third click passing value right should not give error", () => {
+      expect(positiveforword(3)).not.toEqual("there is no number");
+    });
+
+    test("fourth click passing value right should not give error", () => {
+      expect(positiveforword(4)).not.toEqual("there is no number");
     });
   });
 
   describe("input fields form shipping", () => {
-    test("validating Field Address", () => {
-      expect(validateFieldcheck("amna")).toBe("continue");
+    test("validating Field Address should have a value", () => {
+      let addr = "al-wakra";
+      expect(addr).not.toBeNull();
+      expect(validateFieldcheck(addr)).toBe("continue");
     });
 
-    test("validating Field Address", () => {
-      expect(validateFieldcheck("")).toBe("error");
+    test("validating Field Address should not be null", () => {
+      let addr = null;
+      expect(addr).toBeNull();
+      expect(validateFieldcheck("")).toMatch("error");
     });
 
-    test("validating Field phone number", () => {
-      expect(validatePhoneNumbercheck("44562356")).toBe("continue");
+    test("validating Field phone number have length of 8", () => {
+      let num = "44562356";
+      expect(num).toHaveLength(8);
+      expect(validatePhoneNumbercheck(num)).toBe("continue");
     });
 
-    test("validating Field phone number", () => {
+    test("validating Field phone number checking for more then 8 dight", () => {
+      let num = "5593584256";
+      expect(num).toBeGreaterThan(num.toBeGreaterThan(8));
       expect(validatePhoneNumbercheck("5593584256")).toBe("error");
     });
 
-    test("validating Field phone number", () => {
-      expect(validatePhoneNumbercheck("44562356")).toBe("continue");
+    test("validating Field street number should not be less then -1", () => {
+      let numm = -1;
+      expect(numm).toBeLessThan(1);
+      expect(validatestreetNumbercheck(numm)).toBe("error");
     });
 
-    test("validating Field street number", () => {
+    test("validating Field street number should not be more then 9999", () => {
+      let numm = 9997;
+      expect(numm).toBeGreaterThan(9999);
+      expect(validatestreetNumbercheck(numm)).toBe("error");
+    });
+
+    test("validating Field street number should not be less then -1 and more then 9999", () => {
+      //I made the function called between so i check the range from 1 till 9999
+      let numm = -5;
+      //expect(numm).between([1,9999]);
       expect(validatestreetNumbercheck(0)).toBe("error");
     });
 
     test("validating Field street number", () => {
+      //I made the function called between so i check the range from 1 till 9999
+      let numm = 8500;
+      //expect(numm).between([1,9999]);
+      expect(numm).toBeLessThan(1);
       expect(validatestreetNumbercheck(45)).toBe("continue");
     });
 
-    test("validating Field email", () => {
-      expect(validateEmailcheck("")).toBe("error");
+    test("validating Field email empty", () => {
+      let email = "";
+      expect(validateEmailcheck(email)).toBe("error");
     });
 
     test("validating Field email", () => {
-      expect(validateEmailcheck("amna@hotmail.com")).toBe("continue");
+      expect(validateEmailcheck("amna@hotmail.com")).toMatch("continue");
+    });
+
+    test("validating Field email checking @ with email at and point index", () => {
+      let emailat = -1;
+      let emailpoint = -8;
+      expect(emailat).toBeGreaterThan(2);
+      expect(emailpoint).toBeGreaterThan(1);
+      expect(validateEmailcheckindex(emailat, emailpoint)).toBe("error");
     });
 
     test("validating Field email checking @", () => {
-      expect(validateEmailcheckindex(-1, -2)).toBe("error");
-    });
-
-    test("validating Field email checking @", () => {
-      expect(validateEmailcheckindex(2, 5)).toBe("continue");
+      let emailat = 5;
+      let emailpoint = 2;
+      expect(emailat).toBeGreaterThan(-1);
+      expect(emailpoint).toBeGreaterThan(-1);
+      expect(validateEmailcheckindex(emailat, emailpoint)).toBe("continue");
     });
 
     test("validating Field email checking word com", () => {
