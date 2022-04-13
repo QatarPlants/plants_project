@@ -70,7 +70,6 @@ ${x.category}
       ${x.status}   <span style="color: green">${salePrice(
         x.salePercent,
         x.cost
-      
       )}$</span></p>
         </div></div>`)
   );
