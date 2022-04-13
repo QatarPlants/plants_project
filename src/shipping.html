@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styleamna.css"
+    />
+
+    <script src="js/shipping.js"></script>
+    <title>Shipping page</title>
+  </head>
+
+  <body>
+    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+      <div class="container">
+        <!---------------------------------------------------------------------------------------------------------------->
+
+        <div style="width: 45%; float: left; margin-left: 10%">
+          <h1 id="done" style="display: none"></h1>
+
+          <div>
+            <label
+              class="col-form-label col-form-label-sm mt-2"
+              for="inputSmall"
+              >Email</label
+            >
+            <input
+              class="form-control form-control-sm"
+              placeholder=""
+              type="email"
+              name="email"
+              id="email"
+              onblur="validateEmail('email')"
+            />
+            <span id="emailErrorMessage"></span>
+          </div>
+          <div>
+            <label
+              class="col-form-label col-form-label-sm mt-2"
+              for="inputSmall"
+              >Phone Number</label
+            >
+            <input
+              class="form-control form-control-sm"
+              placeholder=""
+              type="number"
+              name="phone-number"
+              min="0"
+              id="phone-number"
+              onblur="validatePhoneNumber('phone-number')"
+            />
+            <span id="phone-error-messages"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="inputSmall" class="form-label mt-2">City</label><br />
+            <select
+              class="form-select-sm"
+              name="city"
+              id="selectCity"
+              style="width: 100%; border: 1px solid gainsboro"
+            >
+              <option key=" " value=" ">-Select-</option>
+              <option key="Doha" value="Doha">Doha</option>
+              <option key="Al Wakrah" value="Al Wakrah">Al Wakrah</option>
+              <option key="Al Khor" value="Al Khor">Al Khor</option>
+              <option key="Dukhan" value="Dukhan">Dukhan</option>
+              <option key="Mesaieed" value="Mesaieed">Mesaieed</option>
+              <option key="Al Rayyan" value="Al Rayyan">Al Rayyan</option>
+              <option key="Umm Salal Muhammed" value="Umm Salal Muhammed">
+                Umm Salal Muhammed
+              </option>
+              <option key="Al Wukair" value="Al Wukair">Al Wukair</option>
+              <option key="Al Ruwais" value="Al Ruwais">Al Ruwais</option>
+            </select>
+            <span id="cityErrorMessage"></span>
+          </div>
+
+          <div>
+            <label
+              class="col-form-label col-form-label-sm mt-2"
+              for="inputSmall"
+              >Address</label
+            >
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder=""
+              name="address"
+              id="address"
+              onblur="validateField('address')"
+            />
+          </div>
+
+          <div>
+            <label
+              class="col-form-label col-form-label-sm mt-2"
+              for="inputSmall"
+              >Pobox</label
+            >
+            <input
+              class="form-control form-control-sm"
+              type="number"
+              placeholder=""
+              id="pobox"
+              min="0"
+              onblur="validateField('pobox')"
+            />
+          </div>
+
+          <div>
+            <label
+              class="col-form-label col-form-label-sm mt-2"
+              for="inputSmall"
+              >Street number</label
+            >
+            <input
+              class="form-control form-control-sm"
+              placeholder=""
+              type="number"
+              name="street-number"
+              min="0"
+              id="street-number"
+              onblur="validatestreetNumber('street-number')"
+            />
+            <span id="street-error-messages"></span>
+          </div>
+          <br />
+          <section>
+            <input
+              type="checkbox"
+              name="validateRobotOrHuman"
+              id="robotCheck"
+              value="not-robot"
+              onclick="validateRobot()"
+            />
+            <lable id="robotCheckLable">I'm not a Robort</lable>
+            <img src="imgs/robotics.png" alt="robot" id="robot-img" />
+            <span id="robotErrorMessage"></span>
+          </section>
+
+          <button class="btn btn-secondary" onClick="validateForm()">
+            Done
+          </button>
+          <br /><br /><br /><br />
+        </div>
+        <br />
+
+        <div style="width: 37%; float: left; margin-left: 3%">
+          <div class="rte">
+            <div
+              class=""
+              data-block="true"
+              data-editor="1bv9m"
+              data-offset-key="apgh7-0-0"
+            >
+              <div style="font-size: 16px; margin-top: 4%">
+                <p>
+                  We're proud to offer<strong
+                    ><span>&nbsp;</span>shipping on all our products!<span
+                      >Tracking&nbsp;and secure checkout are available&nbsp;for
+                      all orders.</span
+                    ></strong
+                  ><strong><br /><br />Processing Time:</strong>We do our best
+                  to process ship all orders as soon as possible. Most orders
+                  are processed within 24-48 hours.<br /><strong
+                    ><br />Tracking your order:</strong
+                  ><br />All orders include tracking information that is
+                  normally sent via email within 48 hours<em>after</em
+                  ><span>&nbsp;</span>the order has been shipped.You can also
+                  track your order using your&nbsp;tracking number<span
+                    >&nbsp;</span
+                  ><strong
+                    ><span
+                      ><a
+                        href="https://www.17track.net/en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >here</a
+                      >.</span
+                    ></strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="clear: left"></div>
+
+        <img id="box" src="imgs/box.PNG" width="20%" />
+
+        <img id="belt" src="imgs/belt.PNG" width="100%" />
+        <div style="clear: left"></div>
+        <br />
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="throw"
+          onclick="forword()"
+        >
+          Move
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onclick="window.location.href = 'delivery.html'"
+        >
+          Done
+        </button>
+        <br /><br /><br /><br />
+      </div>
+    </div>
+  </body>
+</html>
