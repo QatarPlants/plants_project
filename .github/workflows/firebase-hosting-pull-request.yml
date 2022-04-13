@@ -23,7 +23,14 @@ jobs:
         - name: Prettify 🔪
           uses: actionsx/prettier@v2
           with:
-             args: --check .  
+             args: --check .
+          cypress-run:
+        
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Cypress run
+          uses: cypress-io/github-action@v2
+           
     preview_deploy:
       if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
       runs-on: ubuntu-latest
