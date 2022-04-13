@@ -51,14 +51,21 @@ let Sales = [
 
 console.log(Sales);
 
+function showResult2() {
+  const out = document.querySelector("#result");
+  //const totalCost = document.querySelector("#totalCost");
+  let result = "";
+
   Sales.map(
     (x) =>
       (result += `<div class="card" style="width:31%; float: left; margin-left:15px; margin-top: 10px" ><img class="card-img-top" src="${
         x.image
       }" alt="Card image" width="100%" height="400px"><div class="card-body">
+@@ -64,16 +59,19 @@ function showResult2() {
             <h4 class="card-title">${
               x.name
             }  <a href="#" class="btn btn-primary stretched-link">Buy</a> </h4><p class="card-text"> 
+${x.category}   ${x.cost}$    ${x.status}   ${salePrice(
 ${x.category}   
       <span style="text-decoration: line-through;
       color: red"> ${x.cost}$ </span> ${
@@ -66,12 +73,14 @@ ${x.category}
       }  <span style="color: green">${salePrice(
         x.salePercent,
         x.cost
+      )}$</p>
       )}$</span> </p>
-
         </div></div>`)
   );
   out.innerHTML = result;
 }
+
+
 function salePrice(percent, cost) {
   let price = cost - (percent / 100) * cost;
   return price;
