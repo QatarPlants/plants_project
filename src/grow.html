@@ -1,185 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Grow plant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/styleamna.css"
-    />
-  </head>
 
-  <body>
-    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarColor02"
-              aria-controls="navbarColor02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Grow plant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/styleamna.css" />
+</head>
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#"
-                    >Home
-                    <span class="visually-hidden">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Dropdown</a
-                  >
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input
-                  class="form-control me-sm-2"
-                  type="text"
-                  placeholder="Search"
-                />
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                  Search
+<body>
+  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="./index.html"><img src="./src/imgs/logo.PNG" width="160px" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./src/product.html">Products</a>
+                <span class="visually-hidden">(current)</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/grow.html">Growth </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/sale.html">Sales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/stiker.html">Stiker</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <button data-bs-toggle="dropdown" onclick="myFunction()" class="dropbtn nav-link dropdown-toggle">
+                  More
                 </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <!-- ------------------------------------------------------------------------------------------------------------ -->
+                <div class="dropdown-menu dropdown-content" id="myDropdown">
+                  <a class="dropdown-item" href="./src/newArrival.html">New Arrival</a>
+                  <a class="dropdown-item" href="./src/about.html">About</a>
+                  <a class="dropdown-item" href="./src/FAQ.html">FAQ</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./src/contact.html">Contact Us</a>
+                </div>
+              </li>
+            </ul>
 
-        <section>
-          <button
-            style="display: inline-block"
-            id="buttonnight"
-            onclick="night()"
-          >
-            night
-          </button>
-          <button
-            style="display: inline-block"
-            id="buttonWater"
-            onclick="Water()"
-          >
-            Water
-          </button>
+            <form class="d-flex">
+              <i class="material-icons"><a style="
+                text-decoration: none;
+                font-size: 35px;
+                color: #b9f52c;
+              " href="./src/cart.html">shopping_cart</a></i>
+              <i class="material-icons" style="font-size: 35px"><a href="./src/wishlist.html"
+                  style="text-decoration: none; color: rgba(254, 56, 56, 0.941);margin-right: 2px;">favorite</a></i>
 
-          <button style="display: inline-block" id="buttonSun" onclick="Sun()">
-            Sun
-          </button>
-
-          <button style="display: inline-block" id="buttonAir" onclick="Air()">
-            Air
-          </button>
-
-          <button
-            style="display: inline-block; margin-top: 3px; margin-bottom: 3px"
-            id="buttonStart"
-            onclick="start()"
-          >
-            Start
-          </button>
-          <h4 style="display: inline-block; margin-left: 2%" id="update"></h4>
-        </section>
-        <div id="fullsky">
-          <img id="sky" src="imgs/sky.PNG" width="74%" height="200px" />
-          <img
-            id="nightsky"
-            src="imgs/nightsky.PNG"
-            width="73%"
-            height="130px"
-          />
-          <img id="clouds" src="imgs/clouds.png" width="73%" height="130px" />
-        </div>
-
-        <img id="wall" src="imgs/wall2.PNG" width="73%" height="500" />
-
-        <div id="actionsection">
-          <div style="margin-left: 15%; height: 150px">
-            <img
-              id="waterImg"
-              src="imgs/watercan.png"
-              width="200"
-              height="170"
-            />
-            <img id="sunImg" src="imgs/smailsun.png" width="200" height="170" />
-            <img id="airImg" src="imgs/air.png" width="200" height="170" />
-          </div>
-          <br />
-          <div>
-            <img
-              id="sawal"
-              class="animation"
-              src="imgs/shovell.png"
-              width="80"
-              height="100"
-            />
-            <img id="images" src="" />
+              <input class="form-control me-sm-2" type="text" placeholder="Search" style="height: 33px;width: 150px;" />
+              <button class="btn btn-secondary" type="submit" style="height: 33px;font-size: 13px;">
+                Search
+              </button>
+            </form>
           </div>
         </div>
+      </nav>
+      <!-- ------------------------------------------------------------------------------------------------------------ -->
 
-        <div style="clear: both"></div>
+      <section>
+        <button style="display: inline-block" id="buttonnight" onclick="night()">
+          night
+        </button>
+        <button style="display: inline-block" id="buttonWater" onclick="Water()">
+          Water
+        </button>
 
-        <div
-          id="surface"
-          style="
+        <button style="display: inline-block" id="buttonSun" onclick="Sun()">
+          Sun
+        </button>
+
+        <button style="display: inline-block" id="buttonAir" onclick="Air()">
+          Air
+        </button>
+
+        <button style="display: inline-block; margin-top: 3px; margin-bottom: 3px" id="buttonStart" onclick="start()">
+          Start
+        </button>
+        <h4 style="display: inline-block; margin-left: 2%" id="update"></h4>
+      </section>
+      <div id="fullsky">
+        <img id="sky" src="imgs/sky.PNG" width="74%" height="200px" />
+        <img id="nightsky" src="imgs/nightsky.PNG" width="73%" height="130px" />
+        <img id="clouds" src="imgs/clouds.png" width="73%" height="130px" />
+      </div>
+
+      <img id="wall" src="imgs/wall2.PNG" width="73%" height="500" />
+
+      <div id="actionsection">
+        <div style="margin-left: 15%; height: 150px">
+          <img id="waterImg" src="imgs/watercan.png" width="200" height="170" />
+          <img id="sunImg" src="imgs/smailsun.png" width="200" height="170" />
+          <img id="airImg" src="imgs/air.png" width="200" height="170" />
+        </div>
+        <br />
+        <div>
+          <img id="sawal" class="animation" src="imgs/shovell.png" width="80" height="100" />
+          <img id="images" src="" />
+        </div>
+      </div>
+
+      <div style="clear: both"></div>
+
+      <div id="surface" style="
             background-color: #487016;
             height: 500px;
             width: 100;
             overflow: hidden;
-          "
-        >
-          <img src="imgs/soil.png" alt="soil" width="100%" />
-        </div>
+          ">
+        <img src="imgs/soil.png" alt="soil" width="100%" />
       </div>
     </div>
-    <script src="js/anmationamna.js"></script>
-  </body>
+  </div>
+  <script src="js/anmationamna.js"></script>
+</body>
+
 </html>

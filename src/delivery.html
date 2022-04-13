@@ -1,103 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Move Image Using Arrow Keys</title>
-    <link rel="stylesheet" type="text/css" href="css/styleamna.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.min.css"
-    />
-  </head>
 
-  <body>
-    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarColor02"
-              aria-controls="navbarColor02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+<head>
+  <title>Move Image Using Arrow Keys</title>
+  <link rel="stylesheet" type="text/css" href="css/styleamna.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+</head>
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#"
-                    >Home
-                    <span class="visually-hidden">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Dropdown</a
-                  >
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input
-                  class="form-control me-sm-2"
-                  type="text"
-                  placeholder="Search"
-                />
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                  Search
+<body>
+  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="./index.html"><img src="./src/imgs/logo.PNG" width="160px" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./src/product.html">Products</a>
+                <span class="visually-hidden">(current)</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/grow.html">Growth </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/sale.html">Sales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/stiker.html">Stiker</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <button data-bs-toggle="dropdown" onclick="myFunction()" class="dropbtn nav-link dropdown-toggle">
+                  More
                 </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <!---------------------------------------------------------------------------------------------------------------->
-        <h6>Use the keybored arrows to dliver the product to the person</h6>
-        <img
-          id="main"
-          src="https://media.istockphoto.com/vectors/people-on-city-balcony-during-quarantine-vector-illustration-cartoon-vector-id1249763893?k=20&m=1249763893&s=170667a&w=0&h=J8sD8IkM43mxp7lGKnqbrsmi2k0l3bEZfsxUzqisEuM="
-          alt="drone"
-        />
-        <div id="conter">
-          <img id="drone" src="imgs/drone.png" alt="box" />
-        </div>
-      </div>
+                <div class="dropdown-menu dropdown-content" id="myDropdown">
+                  <a class="dropdown-item" href="./src/newArrival.html">New Arrival</a>
+                  <a class="dropdown-item" href="./src/about.html">About</a>
+                  <a class="dropdown-item" href="./src/FAQ.html">FAQ</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./src/contact.html">Contact Us</a>
+                </div>
+              </li>
+            </ul>
 
-      <span id="pos"></span>
-      <script src="js/anmationamna.js"></script>
+            <form class="d-flex">
+              <i class="material-icons"><a style="
+                  text-decoration: none;
+                  font-size: 35px;
+                  color: #b9f52c;
+                " href="./src/cart.html">shopping_cart</a></i>
+              <i class="material-icons" style="font-size: 35px"><a href="./src/wishlist.html"
+                  style="text-decoration: none; color: rgba(254, 56, 56, 0.941);margin-right: 2px;">favorite</a></i>
+
+              <input class="form-control me-sm-2" type="text" placeholder="Search" style="height: 33px;width: 150px;" />
+              <button class="btn btn-secondary" type="submit" style="height: 33px;font-size: 13px;">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!---------------------------------------------------------------------------------------------------------------->
+      <h6>Use the keybored arrows to dliver the product to the person</h6>
+      <img id="main"
+        src="https://media.istockphoto.com/vectors/people-on-city-balcony-during-quarantine-vector-illustration-cartoon-vector-id1249763893?k=20&m=1249763893&s=170667a&w=0&h=J8sD8IkM43mxp7lGKnqbrsmi2k0l3bEZfsxUzqisEuM="
+        alt="drone" />
+      <div id="conter">
+        <img id="drone" src="imgs/drone.png" alt="box" />
+      </div>
     </div>
-  </body>
+
+    <span id="pos"></span>
+    <script src="js/anmationamna.js"></script>
+  </div>
+</body>
+
 </html>
