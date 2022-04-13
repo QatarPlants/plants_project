@@ -1,77 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      href="./css/printt.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styleamna.css"
+    />
+    <script src="./src/js/main.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" media="print" href="./css/printt.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/styleamna.css" />
-  <script src="./src/js/main.js"></script>
+    <title>Stickers</title>
+  </head>
 
-  <title>Stickers</title>
-</head>
+  <body>
+    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="./index.html"><img src="./imgs/logo.PNG" width="160px" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-    <div class="container">
-      <!---------------------------------------------------------------------------------------------------------------->
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./product.html">Products</a>
+              <span class="visually-hidden">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./grow.html">Growth </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sale.html">Sales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./stiker.html">Stiker</a>
+            </li>
 
-      <h4 style="margin: 1%">Hey we have some free sticker for you</h4>
+            <li class="nav-item dropdown">
+              <button data-bs-toggle="dropdown" onclick="myFunction()" class="dropbtn nav-link dropdown-toggle">
+                More
+              </button>
+              <div class="dropdown-menu dropdown-content" id="myDropdown">
+                <a class="dropdown-item" href="./newArrival.html">New Arrival</a>
+                <a class="dropdown-item" href="./about.html">About</a>
+                <a class="dropdown-item" href="./FAQ.html">FAQ</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="./contact.html">Contact Us</a>
+              </div>
+            </li>
+          </ul>
 
-      <button type="button" class="btn btn-warning" onclick="circle()">
-        Circle
-      </button>
-      <button type="button" class="btn btn-warning" onclick="roundedcorners()">
-        Rounded corners
-      </button>
-      <button type="button" class="btn btn-warning" onclick="frame()">
-        Frame
-      </button>
-      <button type="button" class="btn btn-warning" onclick="corener()">
-        Corener Shape
-      </button>
-      <button type="button" class="btn btn-secondary" onclick="clearr()">
-        Clear
-      </button>
-      <button type="button" class="btn btn-dark" id="buttonPrint" style="float: right" onclick="Print()">
-        Print
-      </button>
-      <br /><br />
-      <div style="width: 75%; margin: auto">
-        <img class="imagesticker" src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-ZZ.jpg"
-          width="30%" height="30%" />
+          <form class="d-flex">
+            <i class="material-icons"><a style="
+              text-decoration: none;
+              font-size: 35px;
+              color: #b9f52c;
+            " href="./cart.html">shopping_cart</a></i>
+            <i class="material-icons" style="font-size: 35px"><a href="./wishlist.html"
+                style="text-decoration: none; color: rgba(254, 56, 56, 0.941);margin-right: 2px;">favorite</a></i>
 
-        <img class="imagesticker"
-          src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Tradescantia.jpg" width="30%"
-          height="30%" />
+            <input class="form-control me-sm-2" type="text" placeholder="Search" style="height: 33px;width: 150px;" />
+            <button class="btn btn-secondary" type="submit" style="height: 33px;font-size: 13px;">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav> <br>
+        <!---------------------------------------------------------------------------------------------------------------->
 
-        <img class="imagesticker"
-          src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Terrarium-768x768.jpg" width="30%"
-          height="30%" />
+        <h4 style="margin: 1%">Hey we have some free sticker for you</h4>
 
-        <img class="imagesticker"
-          src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Granny-768x768.jpg" width="30%"
-          height="30%" />
+        <button type="button" class="btn btn-warning" onclick="circle()">
+          Circle
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onclick="roundedcorners()"
+        >
+          Rounded corners
+        </button>
+        <button type="button" class="btn btn-warning" onclick="frame()">
+          Frame
+        </button>
+        <button type="button" class="btn btn-warning" onclick="corener()">
+          Corener Shape
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="clearr()">
+          Clear
+        </button>
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="buttonPrint"
+          style="float: right"
+          onclick="Print()"
+        >
+          Print
+        </button>
+        <br /><br />
+        <div style="width: 75%; margin: auto">
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-ZZ.jpg"
+            width="30%"
+            height="30%"
+          />
 
-        <img class="imagesticker"
-          src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Pink-Princess-768x768.jpg" width="30%"
-          height="30%" />
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Tradescantia.jpg"
+            width="30%"
+            height="30%"
+          />
 
-        <img class="imagesticker" src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Alocasia.jpg"
-          width="30%" height="30%" />
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Terrarium-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
 
-        <img class="imagesticker" src="https://homebyfaith.ca/wp-content/uploads/2021/01/DCS-adansonii-768x768.jpg"
-          width="30%" height="30%" />
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Granny-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
 
-        <img class="imagesticker" src="https://homebyfaith.ca/wp-content/uploads/2021/01/DCS-Ficus-Tineke-768x768.jpg"
-          width="30%" height="30%" />
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Pink-Princess-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
 
-        <img class="imagesticker"
-          src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Monster-v-768x768.jpg" width="30%"
-          height="30%" />
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Alocasia.jpg"
+            width="30%"
+            height="30%"
+          />
+
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2021/01/DCS-adansonii-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
+
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2021/01/DCS-Ficus-Tineke-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
+
+          <img
+            class="imagesticker"
+            src="https://homebyfaith.ca/wp-content/uploads/2020/01/Sticker-Diecut-Monster-v-768x768.jpg"
+            width="30%"
+            height="30%"
+          />
+        </div>
       </div>
     </div>
   </div>

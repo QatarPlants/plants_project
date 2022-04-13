@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 jest.useFakeTimers();
 jest.spyOn(global, "setTimeout");
 const { salePrice, Sales, validateImg } = require("../js/sale.js");
