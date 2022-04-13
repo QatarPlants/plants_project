@@ -180,7 +180,7 @@ html {
 }
 /* ------------------------------shipping page-------------------------- */
 
-#box {
+/* #box {
   z-index: 2;
   position: absolute;
 }
@@ -188,7 +188,7 @@ html {
 #belt {
   z-index: 1;
   position: absolute;
-}
+} */
 
 .errorImg {
   width: 17px;

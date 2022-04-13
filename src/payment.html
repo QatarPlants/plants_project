@@ -1,160 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.min.css"
-    />
-  </head>
 
-  <body>
-    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarColor02"
-              aria-controls="navbarColor02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <script src="js/payment.js"></script>
+</head>
 
-            <div class="collapse navbar-collapse" id="navbarColor02">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#"
-                    >Home
-                    <span class="visually-hidden">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Dropdown</a
-                  >
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                  </div>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input
-                  class="form-control me-sm-2"
-                  type="text"
-                  placeholder="Search"
-                />
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
+<body>
+  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-sm-2" type="text" placeholder="Search" />
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
           </div>
-        </nav>
-        <!---------------------------------------------------------------------------------------------------------------->
-        <h2>Payment</h2>
+        </div>
+      </nav>
+      <!---------------------------------------------------------------------------------------------------------------->
+      <h2>Payment</h2>
 
-        <div class="container" style="margin: auto">
-          <div class="row">
-            <div
-              class="col-sm-6"
-              id="frontcard"
-              style="
+      <div class="container" style="margin: auto">
+        <div class="row">
+          <div class="col-sm-6" id="frontcard" style="
                 color: black;
                 background-color: #b9b8b5;
                 border-radius: 20px;
                 height: 300px;
                 margin: 10px;
-              "
-            >
-              <br />
-              <img src="imgs/card2.png" alt="card" width="13%" />
-              <br /><br />
-              <div style="margin-left: 200px"></div>
-              <br />
-              <input
-                class="form-control form-control-sm"
-                type="number"
-                placeholder="Card number"
-                onblur="validateFieldCard('card-number')"
-                id="card-number"
-                min="0"
-              />
+              ">
+            <br />
+            <img src="imgs/card2.png" alt="card" width="13%" />
+            <br /><br />
+            <div style="margin-left: 200px"></div>
+            <br />
+            <input class="form-control form-control-sm" type="number" placeholder="Card number"
+              onblur="validateFieldCard('card-number')" id="card-number" min="0" />
 
-              <span
-                style="font-weight: bold; color: red; font-size: 16px"
-                id="errornumber"
-              ></span>
-              <br />
+            <span style="font-weight: bold; color: red; font-size: 16px" id="errornumber"></span>
+            <br />
 
-              <div class="row">
-                <div class="col-8 col-sm-6">
-                  <input
-                    class="form-control form-control-sm"
-                    type="text"
-                    placeholder="Card Holder Name"
-                    id="card-name"
-                    onblur="validateFieldCardName('card-name')"
-                  />
-                  <span
-                    style="font-weight: bold; color: red; font-size: 16px"
-                    id="'errorname"
-                  ></span>
-                </div>
-                <div class="col-4 col-sm-6">
-                  <input
-                    class="form-control form-control-sm"
-                    type="date"
-                    placeholder="Date"
-                    onblur="validateFieldCarddate('date')"
-                    id="date"
-                  />
+            <div class="row">
+              <div class="col-8 col-sm-6">
+                <input class="form-control form-control-sm" type="text" placeholder="Card Holder Name" id="card-name"
+                  onblur="validateFieldCardName('card-name')" />
+                <span style="font-weight: bold; color: red; font-size: 16px" id="'errorname"></span>
+              </div>
+              <div class="col-4 col-sm-6">
+                <input class="form-control form-control-sm" type="date" placeholder="Date"
+                  onblur="validateFieldCarddate('date')" id="date" />
 
-                  <span
-                    style="font-weight: bold; color: red; font-size: 16px"
-                    id="errordate"
-                  ></span>
-                </div>
+                <span style="font-weight: bold; color: red; font-size: 16px" id="errordate"></span>
               </div>
             </div>
-            <div
-              class="col-sm-6"
-              style="
+          </div>
+          <div class="col-sm-6" style="
                 color: black;
                 background-color: #b9b8b5;
                 border-radius: 20px;
@@ -162,273 +104,82 @@
                 margin: 10px;
                 padding: 0px;
                 display: none;
-              "
-              id="backcard"
-            >
-              <br />
-              <div
-                style="color: black; background-color: #000000c7; height: 40px"
-              ></div>
+              " id="backcard">
+            <br />
+            <div style="color: black; background-color: #000000c7; height: 40px"></div>
 
-              <div class="row">
-                <div class="col-8 col-sm-9">
-                  <div
-                    style="
+            <div class="row">
+              <div class="col-8 col-sm-9">
+                <div style="
                       color: black;
                       background-color: white;
                       height: 40px;
                       margin-left: 20px;
                       width: 100%;
                       padding-top: 0px;
-                    "
-                  >
-                    <hr
-                      style="
+                    ">
+                  <hr style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      "
-                    />
-                    <hr
-                      style="
+                      " />
+                  <hr style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      "
-                    />
-                    <hr
-                      style="
+                      " />
+                  <hr style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      "
-                    />
-                    <hr
-                      style="
+                      " />
+                  <hr style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      "
-                    />
-                    <hr
-                      style="
+                      " />
+                  <hr style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      "
-                    />
-                  </div>
-                </div>
-                <div class="col-4 col-sm-2">
-                  <input
-                    class="form-control form-control-sm"
-                    type="number"
-                    placeholder="CVC"
-                    min="0"
-                    style="width: 80px; margin-top: 8px"
-                    id="cvc"
-                    onblur="validateFieldCardCvc('cvc')"
-                  />
-                  <span
-                    style="font-weight: bold; color: red; font-size: 16px"
-                    id="errorcvc"
-                  ></span>
+                      " />
                 </div>
               </div>
-            </div>
-            <div class="col-sm-5">
-              <p>
-                <b>Your privacy is important to us!</b>
-                <br /><br />
-                You have confidence in our payment systems and share important
-                personal data with us. We provide you with easy insights and
-                overview into what data we collect, what we use this data for
-                and with whom we may share your data. We only collect personal
-                data to ensure that payment services run smoothly and in order
-                to comply with our legal obligations. for payment we only take<b>
-                  master Card</b
-                >
-              </p>
-
-              <div class="row">
-                <div class="col-8 col-sm-9"></div>
+              <div class="col-4 col-sm-2">
+                <input class="form-control form-control-sm" type="number" placeholder="CVC" min="0"
+                  style="width: 80px; margin-top: 8px" id="cvc" onblur="validateFieldCardCvc('cvc')" />
+                <span style="font-weight: bold; color: red; font-size: 16px" id="errorcvc"></span>
               </div>
             </div>
           </div>
+          <div class="col-sm-5">
+            <p>
+              <b>Your privacy is important to us!</b>
+              <br /><br />
+              You have confidence in our payment systems and share important
+              personal data with us. We provide you with easy insights and
+              overview into what data we collect, what we use this data for
+              and with whom we may share your data. We only collect personal
+              data to ensure that payment services run smoothly and in order
+              to comply with our legal obligations. for payment we only take<b>
+                master Card</b>
+            </p>
+
+            <div class="row">
+              <div class="col-8 col-sm-9"></div>
+            </div>
+          </div>
         </div>
-
-        <button onclick="Flipcard()" id="flip" class="btn btn-dark">
-          Flip
-        </button>
-        <h2 id="donee">dd</h2>
-        <button
-          type="button"
-          class="btn btn-success"
-          onclick="validateFormcard()"
-        >
-          PAY
-        </button>
       </div>
-      <script>
-        function validateFormcard() {
-          let cardnumber = validateFieldCard("card-number");
-          let cardname = validateFieldCardName("card-name");
-          let carddate = validateFieldCarddate("date");
-          let cardcvc = validateFieldCardCvc("cvc");
 
-          let fieldd = document.getElementById("donee");
-          if (
-            cardnumber === true &&
-            cardname === true &&
-            carddate === true &&
-            cardcvc === true
-          ) {
-            fieldd.innerHTML = "Done";
-          } else {
-            fieldd.innerHTML = "Noooo";
-          }
-        }
-
-        function fliping(num) {
-          if (num === 0) {
-            return "none";
-          }
-          if (num === 1) {
-            return "inline";
-          }
-        }
-
-        let clickStateecard = 0;
-        function Flipcard() {
-          var buttn = document.getElementById("flip");
-          clickStateecard++;
-          if (clickStateecard == 1) {
-            var x = document.getElementById("frontcard");
-            x.style.display = fliping(0);
-            var t = document.getElementById("backcard");
-            t.style.display = fliping(1);
-          } else if (clickStateecard == 2) {
-            var xx = document.getElementById("frontcard");
-            xx.style.display = fliping(1);
-            var tt = document.getElementById("backcard");
-            tt.style.display = fliping(0);
-            clickStateecard = 0;
-          }
-        }
-
-        function validateFieldcheckcardnum(inputvalue) {
-          var masterCardRegex = /^(?:5[1-5][0-9]{14})$/;
-          if (masterCardRegex.test(inputvalue)) {
-            return "continue";
-          } else {
-            return "error";
-          }
-        }
-
-        function validateFieldCard(fieldId) {
-          let cardNo = document.getElementById(fieldId).value;
-          let field = document.getElementById(fieldId);
-          let checkstates = validateFieldcheckcardnum(cardNo);
-
-          let out = document.getElementById("errornumber");
-
-          //master
-          if (checkstates === "continue") {
-            field.placeholder = "";
-            field.style.border = "";
-            out.innerHTML = "";
-            return true;
-          } else {
-            field.placeholder = "*Please enter a value*";
-            field.style.borderBottom = "3px solid red";
-            out.innerHTML = "Eenter valid CreditCard Number";
-            return false;
-          }
-        }
-
-        function validateFieldcheckcardname(inputvalue) {
-          if (inputvalue == "") {
-            return "error";
-          } else {
-            return "continue";
-          }
-        }
-
-        function validateFieldCardName(fieldId) {
-          let fieldValue = document.getElementById(fieldId).value;
-          let field = document.getElementById(fieldId);
-          let checkstates = validateFieldcheckcardname(fieldValue);
-          let out = document.getElementById("errorname");
-
-          if (checkstates === "error") {
-            field.placeholder = "*Please enter a value*";
-            field.style.borderBottom = "3px solid red";
-            out.innerHTML = "Not Vaild";
-            return false;
-          } else {
-            field.placeholder = "";
-            field.style.border = "";
-            out.innerHTML = "";
-            return true;
-          }
-        }
-
-        function validateFieldcheckcardcvc(inputvalue) {
-          if (inputvalue.length === 4) {
-            return "continue";
-          } else {
-            return "error";
-          }
-        }
-
-        function validateFieldCardCvc(fieldId) {
-          let fieldValue = document.getElementById(fieldId).value;
-          let field = document.getElementById(fieldId);
-          let checkstates = validateFieldcheckcardcvc(fieldValue);
-          let out = document.getElementById("errorcvc");
-
-          if (checkstates === "error") {
-            field.placeholder = "*Please enter a value*";
-            field.style.borderBottom = "3px solid red";
-            out.innerHTML = "4 Num";
-            return false;
-          } else {
-            field.placeholder = "";
-            field.style.border = "";
-            out.innerHTML = "";
-            return true;
-          }
-        }
-
-        function validateFieldcheckcarddate(inputvalue) {
-          if (+new Date(inputvalue) < +new Date()) {
-            return "error";
-          } else {
-            return "continue";
-          }
-        }
-
-        function validateFieldCarddate(fieldId) {
-          let fieldValue = document.getElementById(fieldId).value;
-          console.log(fieldValue);
-          console.log(new Date(fieldValue));
-          let field = document.getElementById(fieldId);
-          let checkstates = validateFieldcheckcarddate(fieldValue);
-          let out = document.getElementById("errordate");
-
-          if (checkstates === "error") {
-            field.placeholder = "*Please enter a value*";
-            field.style.borderBottom = "3px solid red";
-            out.innerHTML = "Its expiryed";
-            return false;
-          } else {
-            field.placeholder = "";
-            field.style.border = "";
-            out.innerHTML = "";
-            return true;
-          }
-        }
-      </script>
+      <button onclick="Flipcard()" id="flip" class="btn btn-dark">
+        Flip
+      </button>
+      <button type="button" class="btn btn-success" onclick="window.location.href = 'shipping.html'">
+        PAY
+      </button>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
