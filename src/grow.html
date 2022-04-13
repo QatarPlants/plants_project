@@ -1,78 +1,121 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Grow plant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styleamna.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Grow plant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/styleamna.css" />
-</head>
+  <body>
+    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+      <div class="container">
+        <!-- ------------------------------------------------------------------------------------------------------------ -->
 
-<body>
-  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-    <div class="container">
+        <section>
+          <button
+            style="display: inline-block"
+            id="buttonnight"
+            onclick="night()"
+          >
+            night
+          </button>
+          <button
+            style="display: inline-block"
+            id="buttonWater"
+            onclick="Water()"
+          >
+            Water
+          </button>
 
-      <!-- ------------------------------------------------------------------------------------------------------------ -->
+          <button style="display: inline-block" id="buttonSun" onclick="Sun()">
+            Sun
+          </button>
 
-      <section>
-        <button style="display: inline-block" id="buttonnight" onclick="night()">
-          night
-        </button>
-        <button style="display: inline-block" id="buttonWater" onclick="Water()">
-          Water
-        </button>
+          <button style="display: inline-block" id="buttonAir" onclick="Air()">
+            Air
+          </button>
 
-        <button style="display: inline-block" id="buttonSun" onclick="Sun()">
-          Sun
-        </button>
-
-        <button style="display: inline-block" id="buttonAir" onclick="Air()">
-          Air
-        </button>
-
-        <button style="display: inline-block; margin-top: 3px; margin-bottom: 3px" id="buttonStart" onclick="start()">
-          Start
-        </button>
-        <h4 style="display: inline-block; margin-left: 2%" id="update"></h4>
-      </section>
-      <div id="fullsky">
-        <img id="sky" src="imgs/sky.PNG" width="74%" height="200px" />
-        <img id="nightsky" src="imgs/nightsky.PNG" width="73%" height="130px" />
-        <img id="clouds" src="imgs/clouds.png" width="73%" height="130px" />
-      </div>
-
-      <img id="wall" src="imgs/wall2.PNG" width="73%" height="500" />
-
-      <div id="actionsection">
-        <div style="margin-left: 15%; height: 150px">
-          <img id="waterImg" src="imgs/watercan.png" width="200" height="170" />
-          <img id="sunImg" src="imgs/smailsun.png" width="200" height="170" />
-          <img id="airImg" src="imgs/air.png" width="200" height="170" />
+          <button
+            style="display: inline-block; margin-top: 3px; margin-bottom: 3px"
+            id="buttonStart"
+            onclick="start()"
+          >
+            Start
+          </button>
+          <h4 style="display: inline-block; margin-left: 2%" id="update"></h4>
+        </section>
+        <div id="fullsky">
+          <img id="sky" src="imgs/sky.PNG" width="74%" height="200px" />
+          <img
+            id="nightsky"
+            src="imgs/nightsky.PNG"
+            width="73%"
+            height="130px"
+          />
+          <img id="clouds" src="imgs/clouds.png" width="73%" height="130px" />
         </div>
-        <br />
-        <div>
-          <img id="sawal" class="animation" src="imgs/shovell.png" width="80" height="100" />
-          <img id="images" src="" />
+
+        <img id="wall" src="imgs/wall2.PNG" width="73%" height="500" />
+
+        <div id="actionsection">
+          <div style="margin-left: 15%; height: 150px">
+            <img
+              id="waterImg"
+              src="imgs/watercan.png"
+              width="200"
+              height="170"
+            />
+            <img id="sunImg" src="imgs/smailsun.png" width="200" height="170" />
+            <img id="airImg" src="imgs/air.png" width="200" height="170" />
+          </div>
+          <br />
+          <div>
+            <img
+              id="sawal"
+              class="animation"
+              src="imgs/shovell.png"
+              width="80"
+              height="100"
+            />
+            <img id="images" src="" />
+          </div>
         </div>
-      </div>
 
-      <div style="clear: both"></div>
+        <div style="clear: both"></div>
 
-      <div id="surface" style="
+        <div
+          id="surface"
+          style="
             background-color: #487016;
             height: 500px;
             width: 100;
             overflow: hidden;
-          ">
-        <img src="imgs/soil.png" alt="soil" width="100%" />
+          "
+        >
+          <img src="imgs/soil.png" alt="soil" width="100%" />
+        </div>
       </div>
     </div>
-  </div>
-  <script src="js/anmationamna.js"></script>
-</body>
-
+    <script src="js/anmationamna.js"></script>
+  </body>
 </html>

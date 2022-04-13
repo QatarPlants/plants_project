@@ -1,58 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/bootstrap.min.css"
+    />
+    <script src="js/payment.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
-  <script src="js/payment.js"></script>
-</head>
+  <body>
+    <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+      <div class="container">
+        <!---------------------------------------------------------------------------------------------------------------->
+        <h2>Payment</h2>
 
-<body>
-  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
-    <div class="container">
-
-      <!---------------------------------------------------------------------------------------------------------------->
-      <h2>Payment</h2>
-
-      <div class="container" style="margin: auto">
-        <div class="row">
-          <div class="col-sm-6" id="frontcard" style="
+        <div class="container" style="margin: auto">
+          <div class="row">
+            <div
+              class="col-sm-6"
+              id="frontcard"
+              style="
                 color: black;
                 background-color: #b9b8b5;
                 border-radius: 20px;
                 height: 300px;
                 margin: 10px;
-              ">
-            <br />
-            <img src="imgs/card2.png" alt="card" width="13%" />
-            <br /><br />
-            <div style="margin-left: 200px"></div>
-            <br />
-            <input class="form-control form-control-sm" type="number" placeholder="Card number"
-              onblur="validateFieldCard('card-number')" id="card-number" min="0" />
+              "
+            >
+              <br />
+              <img src="imgs/card2.png" alt="card" width="13%" />
+              <br /><br />
+              <div style="margin-left: 200px"></div>
+              <br />
+              <input
+                class="form-control form-control-sm"
+                type="number"
+                placeholder="Card number"
+                onblur="validateFieldCard('card-number')"
+                id="card-number"
+                min="0"
+              />
 
-            <span style="font-weight: bold; color: red; font-size: 16px" id="errornumber"></span>
-            <br />
+              <span
+                style="font-weight: bold; color: red; font-size: 16px"
+                id="errornumber"
+              ></span>
+              <br />
 
-            <div class="row">
-              <div class="col-8 col-sm-6">
-                <input class="form-control form-control-sm" type="text" placeholder="Card Holder Name" id="card-name"
-                  onblur="validateFieldCardName('card-name')" />
-                <span style="font-weight: bold; color: red; font-size: 16px" id="'errorname"></span>
-              </div>
-              <div class="col-4 col-sm-6">
-                <input class="form-control form-control-sm" type="date" placeholder="Date"
-                  onblur="validateFieldCarddate('date')" id="date" />
+              <div class="row">
+                <div class="col-8 col-sm-6">
+                  <input
+                    class="form-control form-control-sm"
+                    type="text"
+                    placeholder="Card Holder Name"
+                    id="card-name"
+                    onblur="validateFieldCardName('card-name')"
+                  />
+                  <span
+                    style="font-weight: bold; color: red; font-size: 16px"
+                    id="'errorname"
+                  ></span>
+                </div>
+                <div class="col-4 col-sm-6">
+                  <input
+                    class="form-control form-control-sm"
+                    type="date"
+                    placeholder="Date"
+                    onblur="validateFieldCarddate('date')"
+                    id="date"
+                  />
 
-                <span style="font-weight: bold; color: red; font-size: 16px" id="errordate"></span>
+                  <span
+                    style="font-weight: bold; color: red; font-size: 16px"
+                    id="errordate"
+                  ></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6" style="
+            <div
+              class="col-sm-6"
+              style="
                 color: black;
                 background-color: #b9b8b5;
                 border-radius: 20px;
@@ -60,82 +99,112 @@
                 margin: 10px;
                 padding: 0px;
                 display: none;
-              " id="backcard">
-            <br />
-            <div style="color: black; background-color: #000000c7; height: 40px"></div>
+              "
+              id="backcard"
+            >
+              <br />
+              <div
+                style="color: black; background-color: #000000c7; height: 40px"
+              ></div>
 
-            <div class="row">
-              <div class="col-8 col-sm-9">
-                <div style="
+              <div class="row">
+                <div class="col-8 col-sm-9">
+                  <div
+                    style="
                       color: black;
                       background-color: white;
                       height: 40px;
                       margin-left: 20px;
                       width: 100%;
                       padding-top: 0px;
-                    ">
-                  <hr style="
+                    "
+                  >
+                    <hr
+                      style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      " />
-                  <hr style="
+                      "
+                    />
+                    <hr
+                      style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      " />
-                  <hr style="
+                      "
+                    />
+                    <hr
+                      style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      " />
-                  <hr style="
+                      "
+                    />
+                    <hr
+                      style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      " />
-                  <hr style="
+                      "
+                    />
+                    <hr
+                      style="
                         margin: 7px;
                         border: 1px solid #e2b502;
                         color: #e2b502;
-                      " />
+                      "
+                    />
+                  </div>
+                </div>
+                <div class="col-4 col-sm-2">
+                  <input
+                    class="form-control form-control-sm"
+                    type="number"
+                    placeholder="CVC"
+                    min="0"
+                    style="width: 80px; margin-top: 8px"
+                    id="cvc"
+                    onblur="validateFieldCardCvc('cvc')"
+                  />
+                  <span
+                    style="font-weight: bold; color: red; font-size: 16px"
+                    id="errorcvc"
+                  ></span>
                 </div>
               </div>
-              <div class="col-4 col-sm-2">
-                <input class="form-control form-control-sm" type="number" placeholder="CVC" min="0"
-                  style="width: 80px; margin-top: 8px" id="cvc" onblur="validateFieldCardCvc('cvc')" />
-                <span style="font-weight: bold; color: red; font-size: 16px" id="errorcvc"></span>
-              </div>
             </div>
-          </div>
-          <div class="col-sm-5">
-            <p>
-              <b>Your privacy is important to us!</b>
-              <br /><br />
-              You have confidence in our payment systems and share important
-              personal data with us. We provide you with easy insights and
-              overview into what data we collect, what we use this data for
-              and with whom we may share your data. We only collect personal
-              data to ensure that payment services run smoothly and in order
-              to comply with our legal obligations. for payment we only take<b>
-                master Card</b>
-            </p>
+            <div class="col-sm-5">
+              <p>
+                <b>Your privacy is important to us!</b>
+                <br /><br />
+                You have confidence in our payment systems and share important
+                personal data with us. We provide you with easy insights and
+                overview into what data we collect, what we use this data for
+                and with whom we may share your data. We only collect personal
+                data to ensure that payment services run smoothly and in order
+                to comply with our legal obligations. for payment we only take<b>
+                  master Card</b
+                >
+              </p>
 
-            <div class="row">
-              <div class="col-8 col-sm-9"></div>
+              <div class="row">
+                <div class="col-8 col-sm-9"></div>
+              </div>
             </div>
           </div>
         </div>
+
+        <button onclick="Flipcard()" id="flip" class="btn btn-dark">
+          Flip
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          onclick="window.location.href = 'shipping.html'"
+        >
+          PAY
+        </button>
       </div>
-
-      <button onclick="Flipcard()" id="flip" class="btn btn-dark">
-        Flip
-      </button>
-      <button type="button" class="btn btn-success" onclick="window.location.href = 'shipping.html'">
-        PAY
-      </button>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
