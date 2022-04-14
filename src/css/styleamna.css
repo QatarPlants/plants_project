@@ -1,0 +1,226 @@
+/* ------------------------------grow page-------------------------- */
+#start {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+#one {
+  display: none;
+  text-align: center;
+  margin: auto;
+}
+
+#nightsky,
+#sawal,
+#images,
+#sunImg,
+#waterImg,
+#airImg {
+  display: none;
+  margin-bottom: 0px;
+}
+
+#waterImg {
+  position: relative;
+  /* animation: mymove 3s infinite; */
+}
+
+#sunImg {
+  position: relative;
+  /* animation: moveingsun 3s infinite; */
+}
+
+@keyframes moveingsun {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 50px;
+    top: 0px;
+  }
+
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 15px;
+  }
+}
+
+.animation {
+  width: 15%;
+  height: 100px;
+  position: relative;
+  animation: shovell 20s infinite;
+  animation-direction: normal;
+  display: none;
+  margin-top: 0%;
+}
+
+@keyframes shovell {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  10% {
+    left: 100px;
+    top: 60px;
+  }
+
+  25% {
+    left: 40px;
+    top: 70px;
+  }
+
+  30% {
+    left: 100px;
+    top: 50px;
+  }
+
+  50% {
+    left: 10px;
+    top: 100px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+#fullsky {
+  width: 137%;
+  height: 130px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#sky,
+#wall {
+  position: absolute;
+  z-index: 1;
+}
+
+#nightsky {
+  position: absolute;
+  z-index: 1;
+}
+
+#clouds {
+  position: absolute;
+  z-index: 2;
+  animation: moveingClouds 6s linear infinite;
+}
+
+#actionsection {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+/* 2950 */
+@keyframes moveingClouds {
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+#surface {
+  position: relative;
+  z-index: 2;
+}
+/* ---------------------------------delivery page----------------------- */
+html {
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  z-index: 1;
+  position: relative;
+}
+#drone {
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  z-index: 2;
+}
+
+#conter {
+  height: 5%;
+  width: 10%;
+  z-index: 2;
+  position: absolute;
+}
+
+#pos {
+  color: black;
+  font-size: 18pt;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------stiker-------------------------------- */
+.imagesticker {
+  border: 1px solid rgb(198, 198, 198);
+  margin: 5px;
+}
+/* ------------------------------shipping page-------------------------- */
+
+#box {
+  z-index: 2;
+  position: absolute;
+}
+
+#belt {
+  z-index: 1;
+  position: absolute;
+}
+
+.errorImg {
+  width: 17px;
+  height: 17px;
+}
+
+#robotCheckVerificationTextDiv,
+#error-match {
+  display: none;
+}
+
+#robotCheckLable {
+  font-size: 24px;
+}
+
+#robot-img {
+  width: 85px;
+  margin-left: 40px;
+}
+
+#useranswer {
+  width: 250px;
+  height: 27px;
+  margin-top: 10px;
+}
+
+#newVerificationText {
+  width: 40px;
+}
+
+#robotCheckVerificationTextDiv lable {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
