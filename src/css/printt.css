@@ -1,0 +1,25 @@
+
+
+@page{
+	size:23in 33in portrait;
+	margin:0.5in;
+}
+
+nav{
+	display: none;
+}
+
+
+#image{
+	width: 47%;
+	height: 45%;
+	margin: 15%;
+}
+
+#buttonPrint{
+	display: none;
+}
+
+.btn{
+	display: none;
+}
