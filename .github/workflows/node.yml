@@ -31,5 +31,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "qatar-plants"
-          heroku_email: "60090876@cna-qatar.edu.qa"
+          heroku_app_name: "heroku-deploymentt"
+          heroku_email: "60085262@cna-qatar.edu.qa"
