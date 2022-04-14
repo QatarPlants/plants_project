@@ -75,4 +75,57 @@ function fliping(num) {
       return false;
     }
   }
+
+  function validateFieldcheckcardname(inputvalue) {
+    if (inputvalue == "") {
+      return "error";
+    } else {
+      return "continue";
+    }
+  }
   
+  function validateFieldCardName(fieldId) {
+    let fieldValue = document.getElementById(fieldId).value;
+    let field = document.getElementById(fieldId);
+    let checkstates = validateFieldcheckcardname(fieldValue);
+    let out = document.getElementById("errorname");
+  
+    if (checkstates === "error") {
+      field.placeholder = "*Please enter a value*";
+      field.style.borderBottom = "3px solid red";
+      out.innerHTML = "Not Vaild";
+      return false;
+    } else {
+      field.placeholder = "";
+      field.style.border = "";
+      out.innerHTML = "";
+      return true;
+    }
+  }
+  
+  function validateFieldcheckcardcvc(inputvalue) {
+    if (inputvalue.length === 4) {
+      return "continue";
+    } else {
+      return "error";
+    }
+  }
+  
+  function validateFieldCardCvc(fieldId) {
+    let fieldValue = document.getElementById(fieldId).value;
+    let field = document.getElementById(fieldId);
+    let checkstates = validateFieldcheckcardcvc(fieldValue);
+    let out = document.getElementById("errorcvc");
+  
+    if (checkstates === "error") {
+      field.placeholder = "*Please enter a value*";
+      field.style.borderBottom = "3px solid red";
+      out.innerHTML = "4 Num";
+      return false;
+    } else {
+      field.placeholder = "";
+      field.style.border = "";
+      out.innerHTML = "";
+      return true;
+    }
+  }  
