@@ -1,0 +1,10 @@
+// .eslintignore
+build/*
+public/*
+src/imgs
+src/css/bootstrap.css
+src/css/bootstrap.min.css
+src/css/bootstrap.min.css
+src/css/printt.css 
+src/css/theme.css
+src/css
