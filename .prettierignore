@@ -11,3 +11,4 @@ src/css
 node_moudules/*
 .github/*
 README.md
+.travis.yml
