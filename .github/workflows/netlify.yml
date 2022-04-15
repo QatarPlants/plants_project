@@ -26,9 +26,9 @@ jobs:
       needs: [build]
       steps:
         - name: Checkout 📁
-        - uses: actions/checkout@v1
+          uses: actions/checkout@v1
         - name: Netify deploy 💠🚀
-        - uses: nwtgck/actions-netlify@v1.2
+          uses: nwtgck/actions-netlify@v1.2
           with:
             publish-dir: './src'
             production-branch: main
