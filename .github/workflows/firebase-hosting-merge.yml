@@ -26,9 +26,9 @@ jobs:
           needs: [build]
           steps:
               - name: Checkout 📁
-              - uses: actions/checkout@v2
+                uses: actions/checkout@v2
               - name: Final deploy 🔥🚀
-              - uses: FirebaseExtended/action-hosting-deploy@v0
+                uses: FirebaseExtended/action-hosting-deploy@v0
                 with:
                   repoToken: '${{ secrets.GITHUB_TOKEN }}'
                   firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_QATARPLANTS_5A735 }}'
