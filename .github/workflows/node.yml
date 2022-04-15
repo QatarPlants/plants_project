@@ -15,6 +15,8 @@ jobs:
           node-version: 12
       - name: yarn install
         run: yarn install
+      - name: testing
+        run: npm test plants.test.js
       - name: eslint 
         uses: icrawl/action-eslint@v1
         with:
