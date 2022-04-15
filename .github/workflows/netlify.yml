@@ -17,7 +17,7 @@ jobs:
         run: yarn install
       - name: testing 🔬
         run: yarn test
-      - name: eslint 🔎 :electron:💠
+      - name: eslint 🔎
         uses: icrawl/action-eslint@v1
         with:
           custom-glob: src/**
