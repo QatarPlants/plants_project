@@ -1,0 +1,25 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v1
+      - name: installing 
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: yarn install
+        run: yarn install
+      - name: eslint 
+        uses: icrawl/action-eslint@v1
+        with:
+          custom-glob: src/**
+      - name: Prettify 
+        uses: actionsx/prettier@v2
+        with:
+         args: --check .
