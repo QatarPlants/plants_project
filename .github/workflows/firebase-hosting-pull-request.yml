@@ -18,7 +18,10 @@ jobs:
           uses: icrawl/action-eslint@v1
           with:
             custom-glob: src/**
-            
+        - name: Prettify 🔪
+          uses: actionsx/prettier@v2
+          with:
+             args: --check .  
     preview_deploy:
       if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
       runs-on: ubuntu-latest
