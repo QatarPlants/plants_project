@@ -12,3 +12,6 @@ node_moudules/*
 .github/*
 README.md
 .travis.yml
+cypress/*
+
+src/cart.html
