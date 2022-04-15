@@ -118,9 +118,5 @@ describe("Grow plant page testing", () => {
     test("last text infor the user its done", () => {
       expect(actionText("done")).toBe("The flower look pretty good work");
     });
-
-    test("error check", () => {
-      expect(actionText("fsfsf")).toBe("error the action is wronge");
-    });
   });
 });
