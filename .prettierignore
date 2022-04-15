@@ -13,5 +13,9 @@ node_moudules/*
 README.md
 .travis.yml
 cypress/*
-
 src/cart.html
+.firebaserc
+firebase.json
+*.cacha
+.firebase
+src/index.html
