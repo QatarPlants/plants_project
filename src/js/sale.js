@@ -64,11 +64,14 @@ function showResult2() {
             <h4 class="card-title">${
               x.name
             }  <a href="#" class="btn btn-primary stretched-link">Buy</a> </h4><p class="card-text"> 
-${x.category}   ${x.cost}$    ${x.status}   ${salePrice(
+${x.category} 
+<span style="text-decoration: line-through;
+      color: red"> ${x.cost}$ </span>
+      ${x.status}   <span style="color: green">${salePrice(
         x.salePercent,
         x.cost
-      )}$</p>
-
+      
+      )}$</span></p>
         </div></div>`)
   );
   out.innerHTML = result;
