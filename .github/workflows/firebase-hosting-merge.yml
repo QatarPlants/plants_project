@@ -1,0 +1,40 @@
+name: Deploy to Firebase Hosting on merge
+'on':
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 📁
+        uses: actions/checkout@v1
+      - name: installing 📦
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: yarn install
+        run: yarn install
+      - name: testing 🔬
+        run: yarn test plants.test.js
+      - name: eslint 🔎
+        uses: icrawl/action-eslint@v1
+        with:
+          custom-glob: src/**
+      - name: Prettify 🔪
+        uses: actionsx/prettier@v2
+        with:
+         args: --check .
+  final_deploy:
+          runs-on: ubuntu-latest
+          needs: [build]
+          steps:
+              - name: Checkout 📁
+                uses: actions/checkout@v2
+              - name: Final deploy 🔥🚀
+                uses: FirebaseExtended/action-hosting-deploy@v0
+                with:
+                  repoToken: '${{ secrets.GITHUB_TOKEN }}'
+                  firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_QATARPLANTS_5A735 }}'
+                  channelId: live
+                  projectId: qatarplants-5a735

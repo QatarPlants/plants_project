@@ -10,3 +10,7 @@ src/css/theme.css
 src/css
 README.md
 .travis.yml
+.firebaserc
+firebase.json
+*.cacha
+.firebase
