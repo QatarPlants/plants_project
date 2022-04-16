@@ -59,20 +59,15 @@ function showResult2() {
   Sales.map(
     (x) =>
       (result += `<div class="card" style="width:31%; float: left; margin-left:15px; margin-top: 10px" ><img class="card-img-top" src="${
-@@ -64,16 +59,19 @@ function showResult2() {
+        x.image
+      }" alt="Card image" width="100%" height="400px"><div class="card-body">
             <h4 class="card-title">${
               x.name
             }  <a href="#" class="btn btn-primary stretched-link">Buy</a> </h4><p class="card-text"> 
 ${x.category}   ${x.cost}$    ${x.status}   ${salePrice(
-${x.category}   
-      <span style="text-decoration: line-through;
-      color: red"> ${x.cost}$ </span> ${
-        x.status
-      }  <span style="color: green">${salePrice(
         x.salePercent,
         x.cost
       )}$</p>
-      )}$</span> </p>
         </div></div>`)
   );
   out.innerHTML = result;
