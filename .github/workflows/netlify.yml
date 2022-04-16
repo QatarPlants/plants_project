@@ -2,6 +2,7 @@ name: nitly
 on:
   pull_request:
     branches: [ main ]
+    types: [closed]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +25,9 @@ jobs:
         uses: actionsx/prettier@v2
         with:
          args: --check .
+    if: github.event.pull_request.merged == true
   netify_deploy:
+      if: github.event.pull_request.merged == true
       runs-on: ubuntu-latest
       needs: [build]
       steps:
