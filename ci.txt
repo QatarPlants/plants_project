@@ -1,6 +1,7 @@
 on:
   push:
   pull_request:
+  
 
 jobs:
   build:
@@ -34,3 +35,4 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           FIREBASE_PROJECT: "amnaaa"
+
