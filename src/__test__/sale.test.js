@@ -5,7 +5,6 @@ const { salePrice, Sales, validateImg } = require("../js/sale.js");
 const { getname, Products } = require("../js/product.js");
 const { total, cart } = require("../js/cart.js");
 
-
 //Meimouna
 describe("sale page testing the sale price", () => {
   describe("salePrice", () => {
