@@ -64,3 +64,8 @@ function corener() {
     element.style.borderRadius = shape("corener");
   });
 }
+
+/* eslint-disable no-undef */
+module.exports = {
+  shape,
+};
