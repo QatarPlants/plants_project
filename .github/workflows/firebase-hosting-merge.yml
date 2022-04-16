@@ -18,6 +18,8 @@ jobs:
         run: yarn install
       - name: testing 🔬
         run: yarn test plants.test.js
+        run: yarn test math.test.js
+        run: yarn test sale.test.js
       - name: eslint 🔎
         uses: icrawl/action-eslint@v1
         with:
