@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 const {
-  animationn,
+  
   allimages,
   sawaltimee,
   suntime,
