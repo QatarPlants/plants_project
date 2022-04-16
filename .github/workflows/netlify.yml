@@ -5,11 +5,12 @@ on:
     types: [closed]
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 📁
         uses: actions/checkout@v1
-      - name: installing 📦
+      - name: installing 📦  
         uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -25,7 +26,6 @@ jobs:
         uses: actionsx/prettier@v2
         with:
          args: --check .
-    if: github.event.pull_request.merged == true
   netify_deploy:
       if: github.event.pull_request.merged == true
       runs-on: ubuntu-latest
