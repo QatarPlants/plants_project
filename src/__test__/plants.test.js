@@ -9,7 +9,6 @@ const {
   waterthird,
   airtime,
   actionText,
-  shape,
   upArrowy,
   downArrowy,
   rightArrowx,
@@ -34,6 +33,8 @@ const {
   validateFieldcheckcardcvc,
   validateFieldcheckcarddate,
 } = require("../js/payment.js");
+
+const { shape } = require("../js/sticker.js");
 
 jest.useFakeTimers();
 jest.spyOn(global, "setTimeout");
