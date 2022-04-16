@@ -51,6 +51,11 @@ let Sales = [
 
 console.log(Sales);
 
+
+function showResult2() {
+  const out = document.querySelector("#result");
+  //const totalCost = document.querySelector("#totalCost");
+  let result = "";
   Sales.map(
     (x) =>
       (result += `<div class="card" style="width:31%; float: left; margin-left:15px; margin-top: 10px" ><img class="card-img-top" src="${
