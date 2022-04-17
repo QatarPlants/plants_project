@@ -86,8 +86,8 @@ function myFunction() {
   let sawalImage2 = getTheId("sawal");
   sawalImage2.style.display = "none";
   sawalImage.src = allimages(0);
-  sawalImage.style.width = "110";
-  sawalImage.style.height = "50";
+  sawalImage.style.width = "90";
+  sawalImage.style.height = "140";
   screenDisplyInline(sawalImage);
   let updatee = getTheId("update");
   updatee.innerHTML = actionText("water");
@@ -109,8 +109,8 @@ function suntime() {
 function myyFunctionn() {
   let updatee = getTheId("update");
   let image = getTheId("images");
-  image.style.width = "160";
-  image.style.height = "230px";
+  image.style.width = "150px";
+  image.style.height = "180px";
   image.src = allimages(4);
   let sunImage = getTheId("sunImg");
   sunImage.style.display = "none";
@@ -153,8 +153,8 @@ function wateronce() {
 function myyFunction() {
   let updatee = getTheId("update");
   let image = getTheId("images");
-  image.style.width = "100";
-  image.style.height = "150px";
+  image.style.width = "90";
+  image.style.height = "140px";
   image.src = allimages(1);
   let sawalImage2 = getTheId("waterImg");
   sawalImage2.style.display = "none";
@@ -183,8 +183,8 @@ function waterthird() {
 function myyFunctiionnn() {
   let updatee = getTheId("update");
   let image = getTheId("images");
-  image.style.width = "160";
-  image.style.height = "230";
+  image.style.width = "140px";
+  image.style.height = "180px";
   image.src = allimages(5);
   let sawalImage2 = getTheId("waterImg");
   sawalImage2.style.display = "none";
@@ -207,8 +207,8 @@ function airtime() {
 function myyFunctionnn() {
   let updatee = getTheId("update");
   let image = getTheId("images");
-  image.style.width = "160";
-  image.style.height = "230px";
+  image.style.width = "110px";
+  image.style.height = "160px";
   image.src = allimages(2);
   let sawalImage2 = getTheId("airImg");
   sawalImage2.style.display = "none";

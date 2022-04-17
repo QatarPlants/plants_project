@@ -25,8 +25,8 @@ function shape(shappe) {
 }
 
 function clearr() {
-  let images = document.getElementsByClassName("image");
-  //   images = Array.prototype.slice.call(images);
+  let images = document.getElementsByClassName("imagesticker");
+  images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.borderRadius = shape("nocorners");
     element.style.border = shape("noborder");
@@ -34,33 +34,38 @@ function clearr() {
 }
 
 function circle() {
-  let images = document.getElementsByClassName("image");
-  //   images = Array.prototype.slice.call(images);
+  let images = document.getElementsByClassName("imagesticker");
+  images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.borderRadius = shape("circle");
   });
 }
 
 function roundedcorners() {
-  let images = document.getElementsByClassName("image");
-  //   images = Array.prototype.slice.call(images);
+  let images = document.getElementsByClassName("imagesticker");
+  images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.borderRadius = shape("roundedcorners");
   });
 }
 
 function frame() {
-  let images = document.getElementsByClassName("image");
-  //   images = Array.prototype.slice.call(images);
+  let images = document.getElementsByClassName("imagesticker");
+  images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.border = shape("frame");
   });
 }
 
 function corener() {
-  let images = document.getElementsByClassName("image");
-  //   images = Array.prototype.slice.call(images);
+  let images = document.getElementsByClassName("imagesticker");
+  images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.borderRadius = shape("corener");
   });
 }
+
+/* eslint-disable no-undef */
+module.exports = {
+  shape,
+};
