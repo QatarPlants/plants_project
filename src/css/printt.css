@@ -23,3 +23,7 @@ nav{
 .btn{
 	display: none;
 }
+
+footer, #head{
+	display: none;
+}

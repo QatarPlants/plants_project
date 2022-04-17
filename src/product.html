@@ -1,57 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Products</title>
-    <link
-      rel="icon"
-      href="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/plant.png"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/main.css"
-    />
-    <script src="./js/main.js"></script>
-    <script src="./js/product.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
 
-  <body>
-   <div style="width: 75%; margin-left: 10%; margin-right: 10%">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Products</title>
+  <link rel="icon" href="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/plant.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <script src="./js/main.js"></script>
+  <script src="./js/product.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div style="width: 75%; margin-left: 10%; margin-right: 10%">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a href="./index.html"><img src="./imgs/logo.PNG" width="160px" /></a>
@@ -111,18 +85,8 @@
     <div style="width: 80%; margin: auto">
       <h1>Products</h1>
       <form class="d-flex btn2" style="width: 350px">
-        <input
-          class="form-control me-sm-2"
-          type="text"
-          id="productSearsh"
-          placeholder="Search"
-        />
-        <button
-          id="mybtn"
-          class="btn btn-secondary my-2 my-sm-0"
-          type="button"
-          onclick="searsh()"
-        >
+        <input class="form-control me-sm-2" type="text" id="productSearsh" placeholder="Search" />
+        <button id="mybtn" class="btn btn-secondary my-2 my-sm-0" type="button" onclick="searsh()">
           Search
         </button>
       </form>
@@ -130,18 +94,15 @@
     </div>
     <br />
     <div>
-      <div
-        class="container"
-        style="width: 100%; padding-left: 5%"
-        id="result"
-      ></div>
+      <div class="container" style="width: 100%; padding-left: 5%" id="result"></div>
       <div style="clear: left"></div>
     </div>
-  </body>
+</body>
 
-  <!-- <script src='./js/Cart.js'></script> -->
-  <script>
-    // eslint-disable-next-line no-undef
-    showResult();
-  </script>
+<!-- <script src='./js/Cart.js'></script> -->
+<script>
+  // eslint-disable-next-line no-undef
+  showResult();
+</script>
+
 </html>

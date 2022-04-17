@@ -58,7 +58,7 @@ function frame() {
 }
 
 function corener() {
-  let images = document.getElementsByClassName("image");
+  let images = document.getElementsByClassName("imagesticker");
   images = Array.prototype.slice.call(images);
   images.forEach((element) => {
     element.style.borderRadius = shape("corener");
